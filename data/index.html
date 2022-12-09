@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="/bootstrap.css">
+    <title>Contacteur Heures Pleines - Creuses</title>
+</head>
+
+<body class="vh-100 d-flex flex-column">
+
+<header class="text-bg-dark p-3 d-flex justify-content-center">
+    <h1 class="text-center">Contacteur heures pleines et creuses</h1>
+</header>
+
+<main class="my-5 container d-flex flex-column flex-grow-1">
+
+    <form action="/get">
+
+        <div>
+            <h1 class="mb-3">Horaires du midi</h1>
+
+            <div class="d-flex flex-wrap gap-3">
+                <div class="flex-grow-1 mb-3">
+                    <div class="input-group">
+                        <label for="midi1" class="input-group-text">Début</label>
+                        <input type="time" name="midi1" id="midi1" class="form-control">
+                    </div>
+                    <p>
+                        <span>Valeur actuelle : </span>
+                        %MIDI1%
+                    </p>
+                </div>
+
+                <div class="flex-grow-1 mb-3">
+                    <div class="input-group">
+                        <label for="midi2" class="input-group-text">Fin</label>
+                        <input type="time" name="midi2" id="midi2" class="form-control">
+                    </div>
+                    <p>
+                        <span>Valeur actuelle : </span>
+                        %MIDI2%
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1 class="mb-3">Horaires de la nuit</h1>
+
+            <div class="d-flex flex-wrap gap-3">
+                <div class="flex-grow-1 mb-3">
+                    <div class="input-group">
+                        <label for="nuit1" class="input-group-text">Début</label>
+                        <input type="time" name="nuit1" id="nuit1" class="form-control">
+                    </div>
+                    <p>
+                        <span>Valeur actuelle : </span>
+                        %NUIT1%
+                    </p>
+                </div>
+
+                <div class="flex-grow-1 mb-3">
+                    <div class="input-group">
+                        <label for="nuit2" class="input-group-text">Fin</label>
+                        <input type="time" name="nuit2" id="nuit2" class="form-control">
+                    </div>
+                    <p>
+                        <span>Valeur actuelle : </span>
+                        %NUIT2%
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-between gap-3">
+            <input class="btn btn-lg btn-outline-success flex-grow-1 flex-shrink-1 flex-basis-0" type="submit" value="Valider les horaires">
+            <label class="btn btn-lg btn-outline-danger flex-grow-1 flex-shrink-1 flex-basis-0" onclick="location.href='/resetTime';">Supprimer les horaires</label>
+        </div>
+
+    </form>
+
+</main>
+
+<footer class="text-bg-dark p-3 d-flex justify-content-center">
+    <h5>Alexandre</h5>
+</footer>
+
+</body>
+
+</html>
