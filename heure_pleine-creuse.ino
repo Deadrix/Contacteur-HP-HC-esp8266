@@ -181,9 +181,6 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  compareScheduleArrayWithActualTime() ? digitalWrite(RELAY_PIN, LOW) : digitalWrite(RELAY_PIN, HIGH);
-  delay(2000);
-
   if ( compareScheduleArrayWithActualTime(timeInMinutes(scheduleArray[0], timeInMinutes(scheduleArray[1]) ) {
     digitalWrite(RELAY_PIN, LOW);
   } else if ( compareScheduleArrayWithActualTime(timeInMinutes(scheduleArray[2], timeInMinutes(scheduleArray[3]) ) {
